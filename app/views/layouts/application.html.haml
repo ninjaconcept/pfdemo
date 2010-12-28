@@ -7,9 +7,10 @@
     = javascript_include_tag :defaults 
     = csrf_meta_tag 
 
-  %body
-    %p.notice= notice
-    %p.alert= alert
+  %body.bp
+    .body-inner
+      .flash_messages
+        = flash_messages
 
     .admin-navigation
       = render 'devise/menu/menu'
