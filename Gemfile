@@ -12,6 +12,7 @@ gem "compass", ">= 0.10.6"
 gem 'passenger'
 gem 'simple_form'
 gem 'jquery-rails'
+gem "simple-navigation"
 
 # gem 'inherited_resources', '1.1.2'
 # gem 'friendly_id'
