@@ -26,7 +26,7 @@ Feature: Signup
     When I press "Sign up"
     Then I should see "You have signed up successfully. If enabled, a confirmation was sent to your e-mail."
     And I should be on "/"
-    And I should see "Welcome to SchulLV Demo"
+    And I should see "Welcome home"
   
 
   Scenario Outline: Signup with invalid data
