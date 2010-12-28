@@ -25,8 +25,8 @@ Feature: Signup
       | Password confirmation | superpass          |
     When I press "Sign up"
     Then I should see "You have signed up successfully. If enabled, a confirmation was sent to your e-mail."
-    And I should be on "/"
-    And I should see "Welcome home"
+    And I should be on "/users/edit"
+    And I should see "Edit User"
   
 
   Scenario Outline: Signup with invalid data
