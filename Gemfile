@@ -8,7 +8,7 @@ gem 'rails', '3.0.3'
 gem 'mysql2'
 gem 'devise'
 gem 'haml'
-gem 'compass'
+gem "compass", ">= 0.10.6"
 gem 'passenger'
 gem 'simple_form'
 gem 'jquery-rails'
