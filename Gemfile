@@ -21,9 +21,6 @@ gem "simple-navigation"
 # gem 'omniauth'
 
 
-gem 'capistrano'
-gem 'capistrano-ext'
-
 group :development do
   gem 'rails3-generators'
   gem 'haml-rails'
