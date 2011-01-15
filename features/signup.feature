@@ -24,7 +24,7 @@ Feature: Signup
       | Password              | superpass          |
       | Password confirmation | superpass          |
     When I press "Sign up"
-    Then I should see "You have signed up successfully. If enabled, a confirmation was sent to your e-mail."
+    Then I should see "You have signed up successfully."
     And I should be on "/users/edit"
     And I should see "Edit User"
   
