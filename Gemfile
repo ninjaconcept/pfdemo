@@ -5,7 +5,6 @@ gem 'rails', '3.0.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql', '>= 2.8.1'
 gem 'devise'
 gem 'haml'
 gem "compass", ">= 0.10.6"
@@ -20,8 +19,9 @@ gem "simple-navigation"
 # gem 'pacecar'
 # gem 'omniauth'
 
+gem 'mysql', '>= 2.8.1'
 
-group :development do
+group :development do  
   gem 'rails3-generators'
   gem 'haml-rails'
   
