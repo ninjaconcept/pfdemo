@@ -19,12 +19,16 @@ gem 'jquery-rails'
 # gem 'pacecar'
 # gem 'omniauth'
 
+
+gem 'capistrano'
+gem 'capistrano-ext'
+
 group :development do
   gem 'rails3-generators'
   gem 'haml-rails'
   
-  # gem 'capistrano'
-  # gem 'capistrano-ext'
+  gem 'capistrano'
+  gem 'capistrano-ext'
 end
 
 group :test, :cucumber do  
