@@ -1,0 +1,38 @@
+
+Description:
+    This adds a complete deployment environment based on
+    - a git repo hosted on ninjaconcept servers
+    - apache2 / passenger
+
+Example:
+    ./script/generate nc_deployment MYPROJECT
+
+    
+    This will create:
+    
+        |-- Capfile
+        |-- config
+        |   |-- deploy.rb
+        |   |-- deploy
+        |   |   |-- config.rb.example
+        |   |   |-- production.rb
+        |   |   `-- staging.rb
+        |   |-- environments
+        |   |   |-- migration.rb
+        |   |   `-- staging.rb
+
+    
+    Rake Tasks:
+      rake nc:deploy:prepare
+      rake nc:deploy:vhost
+      
+
+Pre-requisites:
+    gem install capistrano
+    gem install capistrano-ext
+
+
+Presumptions:
+    - database migrations with a user "deployment" (create this user and give required rights)
+    - database application user with the projects MYPROJECT
+    - capistrano actions with user "rails" (add public SSH key to authorized_keys file and check rights for accessing scm servers)
