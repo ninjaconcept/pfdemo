@@ -1,0 +1,29 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  database: pf_development
+  username: root
+  password: root
+  reconnect: true
+  pool: 30
+
+production:
+  adapter: mysql
+  encoding: utf8
+  database: pf_production
+  username: root
+  password: root
+  reconnect: true
+  pool: 10
+
+test: &TEST
+  adapter: mysql
+  encoding: utf8
+  database: pf_test
+  username: root
+  password: root
+  reconnect: true
+  pool: 10
+
+cucumber:
+  <<: *TEST
