@@ -1,3 +1,4 @@
+# encoding: utf-8
 SimpleNavigation::Configuration.run do |navigation|
   # Specify a custom renderer if needed.
   # The default renderer is SimpleNavigation::Renderer::List which renders HTML lists.
@@ -23,14 +24,25 @@ SimpleNavigation::Configuration.run do |navigation|
   # Define the primary navigation
 
   navigation.items do |primary|
-    primary.item :home, 'Startseite', root_path do |home|
-
+    primary.dom_class="nav"
+    primary.item :home, 'Startseite', root_path, :highlights_on=>/^(\/home|\/)$/ do |home| #spezieller pfad, auf /home und auf /
       home.item :home_menu1, "Menüpunkt1", "#"
-      home.item :home_menu2, "Menüpunkt2", "#"
+      home.item :home_menu1, "Menüpunkt2", "#"
     end
-    primary.item :test, 'Main menu 2', "#"
     if user_signed_in?
-      primary.item :test2, 'personal menu 2', "#"
+      primary.item :my, 'Persönlicher Bereich', "my_path" do |my|
+        #my.dom_class="nav"
+        my.item :my_start, 'Meine Startseite', "my_start_path"
+        my.item :my_edit_registration, 'Edit registration', edit_user_registration_path
+      end
+      primary.item :my_logout, 'Logout', destroy_user_session_path
+    else
+      primary.item :login, 'Register', new_user_registration_path
+      primary.item :login, 'Login', new_user_session_path
+    end
+
+    if user_signed_in?
+      primary.item :admin, "Admin-Bereich", "admin_path"
     end
   end
 
